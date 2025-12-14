@@ -67,11 +67,11 @@ async def main():
         settings.map_created = False
 
         # Pause Button
-        pause = menu.Button(pygame.image.load("Pause.png"), (1100, 50), "",
+        pause = menu.Button(pygame.image.load("assets/Pause.png"), (1100, 50), "",
                             pygame.font.Font("font.ttf", 200), "White", "Red")
         paused = False
 
-        QuitButton = menu.Button(pygame.image.load("QuitButton3.png"), (1200, 50), "",
+        QuitButton = menu.Button(pygame.image.load("assets/QuitButton3as"), (1200, 50), "",
                                  pygame.font.Font("font.ttf", 200), "White", "Red")
 
         prev_time = time.time()
@@ -248,7 +248,7 @@ async def main():
                             paused = False
 
                 if paused:
-                    instruction = menu.Button(pygame.image.load("TheInstructions.png"), (640, 275), "",
+                    instruction = menu.Button(pygame.image.load("assets/TheInstructions.png"), (640, 275), "",
                                          pygame.font.Font("font.ttf", 50), "#d7fcd4", "Orange")
                     instruction.update(game.screen)
                     # pause.update(game.screen)
@@ -271,7 +271,7 @@ async def main():
                 if settings.playerdeath:
                     # self.clock.tick(fps)
                     mouse = pygame.mouse.get_pos()
-                    q = menu.Button(pygame.image.load("Options Rect.png"), (640, 100), "Game Over",
+                    q = menu.Button(pygame.image.load("assets/Options Rect.png"), (640, 100), "Game Over",
                                     pygame.font.Font("font.ttf", 40), "White", "Red")
                     q.changeColor(mouse)
                     q.update(game.screen)
@@ -291,11 +291,11 @@ async def main():
                     game.time_now = game.time
 
                 if game.time - game.time_now < 5 and not settings.playerdeath:
-                    w = menu.Button(pygame.image.load("Picture1.png"), (640, 100), "WAVE " + str(settings.wave),
+                    w = menu.Button(pygame.image.load("assets/Picture1.png"), (640, 100), "WAVE " + str(settings.wave),
                                     pygame.font.Font("font.ttf", 50), "White", "Red")
                     w.update(game.screen)
 
-                target = menu.Button(pygame.image.load("Target.png"), (mouse), "",
+                target = menu.Button(pygame.image.load("assets/Target.png"), (mouse), "",
                                     pygame.font.Font("font.ttf", 50), "White", "Red")
                 target.update(game.screen)
 

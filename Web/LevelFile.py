@@ -38,56 +38,56 @@ class Level:
         if settings.game_level == 1:
             for x in range(0, ground_width * scale + 1, ground_width):
                 for y in range(0, ground_height * scale + 1, ground_height):
-                    Things(self.visible_sprites, (x, y), 'ground_cropped.png')
+                    Things(self.visible_sprites, (x, y), 'assets/ground_cropped.png')
 
             # Rocks around the boundary
-            Rock((627, 615), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
-            Rock((600, 1200), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
-            Rock((700, 2000), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
-            Rock((700, 2900), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
+            Rock((627, 615), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
+            Rock((600, 1200), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
+            Rock((700, 2000), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
+            Rock((700, 2900), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
 
-            Rock((3569 - 120, 615), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
-            Rock((3569 - 200, 1200), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
-            Rock((3569 - 80, 2000), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
-            Rock((3569 - 180, 2900), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
+            Rock((3569 - 120, 615), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
+            Rock((3569 - 200, 1200), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
+            Rock((3569 - 80, 2000), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
+            Rock((3569 - 180, 2900), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
 
-            Rock((1500, 3100), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
-            Rock((1915, 3000), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
-            Rock((3569, 3029), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
+            Rock((1500, 3100), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
+            Rock((1915, 3000), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
+            Rock((3569, 3029), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
 
-            Rock((1543, 656), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
-            Rock((2817, 571), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
+            Rock((1543, 656), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
+            Rock((2817, 571), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
 
         elif settings.game_level == 2:
             for x in range(0, ground_width * scale + 1, ground_width):
                 for y in range(0, ground_height * scale + 1, ground_height):
-                    Things(self.visible_sprites, (x, y), 'ground_desert6.png')
+                    Things(self.visible_sprites, (x, y), 'assets/ground_desert6.png')
             # Rocks around the boundary
-            Rock((627, 615), [self.visible_sprites, self.obstacle_sprites], 'bush.png')
-            Rock((600, 1200), [self.visible_sprites, self.obstacle_sprites], 'bush.png')
-            Rock((700, 2000), [self.visible_sprites, self.obstacle_sprites], 'bush.png')
-            Rock((700, 2900), [self.visible_sprites, self.obstacle_sprites], 'bush.png')
+            Rock((627, 615), [self.visible_sprites, self.obstacle_sprites], 'assets/bush.png')
+            Rock((600, 1200), [self.visible_sprites, self.obstacle_sprites], 'assets/bush.png')
+            Rock((700, 2000), [self.visible_sprites, self.obstacle_sprites], 'assets/bush.png')
+            Rock((700, 2900), [self.visible_sprites, self.obstacle_sprites], 'assets/bush.png')
 
-            Rock((3569 - 120, 615), [self.visible_sprites, self.obstacle_sprites], 'bush.png')
-            Rock((3569 - 200, 1200), [self.visible_sprites, self.obstacle_sprites], 'bush.png')
-            Rock((3569 - 80, 2000), [self.visible_sprites, self.obstacle_sprites], 'bush.png')
-            Rock((3569 - 180, 2900), [self.visible_sprites, self.obstacle_sprites], 'bush.png')
+            Rock((3569 - 120, 615), [self.visible_sprites, self.obstacle_sprites], 'assets/bush.png')
+            Rock((3569 - 200, 1200), [self.visible_sprites, self.obstacle_sprites], 'assets/bush.png')
+            Rock((3569 - 80, 2000), [self.visible_sprites, self.obstacle_sprites], 'assets/bush.png')
+            Rock((3569 - 180, 2900), [self.visible_sprites, self.obstacle_sprites], 'assets/bush.png')
 
-            Rock((1500, 3100), [self.visible_sprites, self.obstacle_sprites], 'bush.png')
-            Rock((1915, 3000), [self.visible_sprites, self.obstacle_sprites], 'bush.png')
-            Rock((3569, 3029), [self.visible_sprites, self.obstacle_sprites], 'bush.png')
+            Rock((1500, 3100), [self.visible_sprites, self.obstacle_sprites], 'assets/bush.png')
+            Rock((1915, 3000), [self.visible_sprites, self.obstacle_sprites], 'assets/bush.png')
+            Rock((3569, 3029), [self.visible_sprites, self.obstacle_sprites], 'assets/bush.png')
 
-            Rock((1543, 656), [self.visible_sprites, self.obstacle_sprites], 'bush.png')
-            Rock((2817, 571), [self.visible_sprites, self.obstacle_sprites], 'bush.png')
+            Rock((1543, 656), [self.visible_sprites, self.obstacle_sprites], 'assets/bush.png')
+            Rock((2817, 571), [self.visible_sprites, self.obstacle_sprites], 'assets/bush.png')
 
         # Player
         if settings.game_level == 1:
             self.player = Player((ground_width * scale / 2, ground_height * scale / 2), [self.visible_sprites],
-                                 self.obstacle_sprites, self.enemy_sprites, "player.png")
+                                 self.obstacle_sprites, self.enemy_sprites, "assets/player.png")
 
         elif settings.game_level == 2:
             self.player = Player((ground_width * scale / 2, ground_height * scale / 2), [self.visible_sprites],
-                                 self.obstacle_sprites, self.enemy_sprites, "tank.png")
+                                 self.obstacle_sprites, self.enemy_sprites, "assets/tank.png")
 
         # Rocks and Bushes
         for i in range(settings.object_rate):
@@ -102,14 +102,14 @@ class Level:
                     if not x in range(self.player.rect.centerx - 256,
                                       self.player.rect.centerx + 256) and not y in range(self.player.rect.centerx - 256,
                                                                                          self.player.rect.centerx + 256):
-                        Rock((x, y), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
+                        Rock((x, y), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
 
                 # 2 third of objects breakable: 66%
                 if rand == 2:
                     if not x in range(self.player.rect.centerx - 256,
                                       self.player.rect.centerx + 256) and not y in range(self.player.rect.centerx - 256,
                                                                                          self.player.rect.centerx + 256):
-                        Bush((x, y), [self.visible_sprites, self.obstacle_sprites], 'bush.png')
+                        Bush((x, y), [self.visible_sprites, self.obstacle_sprites], 'assets/bush.png')
 
 
             elif settings.game_level == 2:
@@ -123,33 +123,33 @@ class Level:
                     if not x in range(self.player.rect.centerx - 256,
                                       self.player.rect.centerx + 256) and not y in range(self.player.rect.centerx - 256,
                                                                                          self.player.rect.centerx + 256):
-                        Rock((x, y), [self.visible_sprites, self.obstacle_sprites], 'rocks.png')
+                        Rock((x, y), [self.visible_sprites, self.obstacle_sprites], 'assets/rocks.png')
 
                 # 2 third of objects breakable: 66%
                 if rand == 2:
                     if not x in range(self.player.rect.centerx - 256,
                                       self.player.rect.centerx + 256) and not y in range(self.player.rect.centerx - 256,
                                                                                          self.player.rect.centerx + 256):
-                        Bush((x, y), [self.visible_sprites, self.obstacle_sprites], 'cactus.png')
+                        Bush((x, y), [self.visible_sprites, self.obstacle_sprites], 'assets/cactus.png')
 
         # Boundary
         if settings.game_level == 1:
             for i in range(64 * 8, ground_width * scale - 64 * 8, 64):
-                Rock((i, 64 * 8), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
-                Rock((i, ground_height * scale - 64 * 8), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
+                Rock((i, 64 * 8), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
+                Rock((i, ground_height * scale - 64 * 8), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
 
             for j in range(64 * 8, ground_height * scale - 64 * 8, 64):
-                Rock((64 * 8, j), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
-                Rock((ground_width * scale - 64 * 8, j), [self.visible_sprites, self.obstacle_sprites], 'rock.png')
+                Rock((64 * 8, j), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
+                Rock((ground_width * scale - 64 * 8, j), [self.visible_sprites, self.obstacle_sprites], 'assets/rock.png')
 
         elif settings.game_level == 2:
             for i in range(64 * 8, ground_width * scale - 64 * 8, 64):
-                Rock((i, 64 * 8), [self.visible_sprites, self.obstacle_sprites], 'rocks.png')
-                Rock((i, ground_height * scale - 64 * 8), [self.visible_sprites, self.obstacle_sprites], 'rocks.png')
+                Rock((i, 64 * 8), [self.visible_sprites, self.obstacle_sprites], 'assets/rocks.png')
+                Rock((i, ground_height * scale - 64 * 8), [self.visible_sprites, self.obstacle_sprites], 'assets/rocks.png')
 
             for j in range(64 * 8, ground_height * scale - 64 * 8, 64):
-                Rock((64 * 8, j), [self.visible_sprites, self.obstacle_sprites], 'rocks.png')
-                Rock((ground_width * scale - 64 * 8, j), [self.visible_sprites, self.obstacle_sprites], 'rocks.png')
+                Rock((64 * 8, j), [self.visible_sprites, self.obstacle_sprites], 'assets/rocks.png')
+                Rock((ground_width * scale - 64 * 8, j), [self.visible_sprites, self.obstacle_sprites], 'assets/rocks.png')
 
     # Method for generating enemies while game is running
     def spawn(self):

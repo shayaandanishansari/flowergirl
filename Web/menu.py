@@ -48,31 +48,31 @@ class Menu:
         pygame.init()
         pygame.display.set_caption("Flower Girl: A Damsel in Distress")
         self.screen = pygame.display.set_mode((1280, 720))
-        self.background = pygame.image.load("Background.png").convert_alpha()
+        self.background = pygame.image.load("assets/Background.png").convert_alpha()
 
         self.screen.blit(self.background, (0, 0))
 
         self.mouse = None
 
         # Associations: Composition
-        self.PlayButton = Button(pygame.image.load("Play Rect.png"), (640, 240), "Play",
+        self.PlayButton = Button(pygame.image.load("assets/Play Rect.png"), (640, 240), "Play",
                                  pygame.font.Font("font.ttf", 50), "#d7fcd4", "Orange")
-        self.ViewScoreButton = Button(pygame.image.load("Options Rect.png"), (640, 400), "HighScore",
+        self.ViewScoreButton = Button(pygame.image.load("assets/Options Rect.png"), (640, 400), "HighScore",
                                       pygame.font.Font("font.ttf", 50), "#d7fcd4", "Orange")
-        self.LevelOneButton = Button(pygame.image.load("Play Rect.png"), (640, 240), "Level 1",
+        self.LevelOneButton = Button(pygame.image.load("assets/Play Rect.png"), (640, 240), "Level 1",
                                      pygame.font.Font("font.ttf", 50), "#d7fcd4", "Orange")
-        self.LevelTwoButton = Button(pygame.image.load("Play Rect.png"), (640, 400), "Level 2",
+        self.LevelTwoButton = Button(pygame.image.load("assets/Play Rect.png"), (640, 400), "Level 2",
                                      pygame.font.Font("font.ttf", 50), "#d7fcd4", "Orange")
-        self.BackButton = Button(pygame.image.load("Play Rect.png"), (640, 600), "Back",
+        self.BackButton = Button(pygame.image.load("assets/Play Rect.png"), (640, 600), "Back",
                                  pygame.font.Font("font.ttf", 50), "#d7fcd4", "Green")
 
-        self.score = Button(pygame.image.load("Play Rect.png"), (640, 300), str(HighScoreFile.readhighscore()),
+        self.score = Button(pygame.image.load("assets/Play Rect.png"), (640, 300), str(HighScoreFile.readhighscore()),
                             pygame.font.Font("font.ttf", 50), "White", "Green")
 
-        self.InstructionsButton = Button(pygame.image.load("Options Rect2.png"), (640, 560), "Instructions",
+        self.InstructionsButton = Button(pygame.image.load("assets/Options Rect2.png"), (640, 560), "Instructions",
                                          pygame.font.Font("font.ttf", 50), "#d7fcd4", "Orange")
 
-        self.instruction = Button(pygame.image.load("TheInstructions.png"), (640, 275), "",
+        self.instruction = Button(pygame.image.load("assets/TheInstructions.png"), (640, 275), "",
                                                  pygame.font.Font("font.ttf", 50), "#d7fcd4", "Orange")
 
         # Arrays of Objects

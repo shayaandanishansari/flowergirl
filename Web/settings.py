@@ -30,15 +30,15 @@ phone = False
 playerdeath = False
 gameover = True
 
-monster_data = {'squid': {'health': 100,'exp':100, 'damage':20,'image': 'squid.png', 'speed': 3, 'attack_radius': 80},
-	'raccoon': {'health': 300,'exp':250,'damage':40,'image': 'raccoon.png','speed': 3, 'attack_radius': 120},
-	'spirit': {'health': 100,'exp':110,'damage':8,'image': 'fire.png', 'speed': 4, 'attack_radius': 60},
-	'bamboo': {'health': 70,'exp':120,'damage':6,'image': 'bamboo.png', 'speed': 3, 'attack_radius': 50},
+monster_data = {'squid': {'health': 100,'exp':100, 'damage':20,'image': 'assets/squid.png', 'speed': 3, 'attack_radius': 80},
+	'raccoon': {'health': 300,'exp':250,'damage':40,'image': 'assets/raccoon.png','speed': 3, 'attack_radius': 120},
+	'spirit': {'health': 100,'exp':110,'damage':8,'image': 'assets/fire.png', 'speed': 4, 'attack_radius': 60},
+	'bamboo': {'health': 70,'exp':120,'damage':6,'image': 'assets/bamboo.png', 'speed': 3, 'attack_radius': 50},
 
-	'fire_spirit': {'health': 150,'exp':150, 'damage':20,'image': 'fire_spirit.png', 'speed': 3, 'attack_radius': 80},
-	'spider': {'health': 100,'exp':180,'damage':9,'image': 'spider.png','speed': 4, 'attack_radius': 50},
-	'zombie': {'health': 200,'exp':160,'damage':12,'image': 'zombie_gnome.png', 'speed': 3, 'attack_radius': 60},
-	'troll': {'health': 450,'exp':350,'damage':60,'image': 'troll.png', 'speed': 3, 'attack_radius': 120},
+	'fire_spirit': {'health': 150,'exp':150, 'damage':20,'image': 'assets/fire_spirit.png', 'speed': 3, 'attack_radius': 80},
+	'spider': {'health': 100,'exp':180,'damage':9,'image': 'assets/spider.png','speed': 4, 'attack_radius': 50},
+	'zombie': {'health': 200,'exp':160,'damage':12,'image': 'assets/zombie_gnome.png', 'speed': 3, 'attack_radius': 60},
+	'troll': {'health': 450,'exp':350,'damage':60,'image': 'assets/troll.png', 'speed': 3, 'attack_radius': 120},
 	}
 
 
