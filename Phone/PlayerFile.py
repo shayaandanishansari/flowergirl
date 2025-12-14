@@ -124,9 +124,9 @@ class Bullet(pygame.sprite.Sprite):
         self.enemy_sprites = enemy_sprites
 
         if settings.game_level == 1:
-            self.image = pygame.image.load("flower.png").convert_alpha()
+            self.image = pygame.image.load("assets/flower.png").convert_alpha()
         elif settings.game_level == 2:
-            self.image = pygame.image.load("bullet.png").convert_alpha()
+            self.image = pygame.image.load("assets/bullet.png").convert_alpha()
 
         self.image = pygame.transform.rotozoom(self.image, 0, 2)
         self.rect = self.image.get_rect()

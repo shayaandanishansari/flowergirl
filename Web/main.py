@@ -71,7 +71,7 @@ async def main():
                             pygame.font.Font("font.ttf", 200), "White", "Red")
         paused = False
 
-        QuitButton = menu.Button(pygame.image.load("assets/QuitButton3as"), (1200, 50), "",
+        QuitButton = menu.Button(pygame.image.load("assets/QuitButton3.png"), (1200, 50), "",
                                  pygame.font.Font("font.ttf", 200), "White", "Red")
 
         prev_time = time.time()
