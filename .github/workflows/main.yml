@@ -1,0 +1,147 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - release
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  APP_ID: flower_girl
+  SRC_DIR: Web
+
+jobs:
+  # -------------------------------
+  # 1) WEB: build + deploy to Pages
+  # -------------------------------
+  web_deploy:
+    name: Web Deploy
+    runs-on: ubuntu-latest
+    concurrency:
+      group: web-pages-${{ github.ref }}
+      cancel-in-progress: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r "${{ env.SRC_DIR }}/requirements.txt"
+          pip install pygbag
+
+      - name: Build Web (pygbag)
+        run: |
+          cd "${{ env.SRC_DIR }}"
+          python -m pygbag --build main.py
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ${{ env.SRC_DIR }}/build/web
+
+  # -------------------------------
+  # 2) WINDOWS build (PyInstaller)
+  # -------------------------------
+  windows_build:
+    name: Windows Build
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install deps
+        shell: pwsh
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r "${env:SRC_DIR}\requirements.txt"
+          pip install pyinstaller
+
+      - name: Build Windows EXE
+        shell: pwsh
+        run: |
+          cd $env:SRC_DIR
+
+          # NOTE: add-data uses ";" on Windows (source;dest)
+          pyinstaller --noconfirm --onefile --windowed `
+            --name "FlowerGirl" `
+            --add-data "assets;assets" `
+            main.py
+
+          Compress-Archive -Path ".\dist\FlowerGirl.exe" -DestinationPath "$env:GITHUB_WORKSPACE\${env:APP_ID}_windows.zip" -Force
+
+      - name: Upload Windows Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows
+          path: ${{ env.APP_ID }}_windows.zip
+          if-no-files-found: error
+
+  # -------------------------------
+  # 3) CREATE GITHUB RELEASE
+  #    (excluding the web build)
+  # -------------------------------
+  publish_release:
+    name: Publish Release
+    needs:
+      - windows_build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout (full history for tagging)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: dist
+
+      - name: Flatten dist
+        run: |
+          find dist -type f -maxdepth 2 -print -exec mv -t dist {} \;
+          find dist -type d -empty -delete
+
+      - name: Create auto tag
+        run: |
+          TAG="release-${{ github.run_number }}"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git tag -a "$TAG" -m "Automated release from release branch"
+          git push origin "$TAG"
+          echo "TAG=$TAG" >> $GITHUB_ENV
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG }}
+          name: "Release ${{ github.run_number }}"
+          body: |
+            Automated build from the **release** branch.
+
+            Included:
+            - Windows (.exe)
+
+            Web is deployed to GitHub Pages separately.
+          files: |
+            dist/${{ env.APP_ID }}_windows.zip
