@@ -40,7 +40,7 @@ Their educational content and tutorials served as key learning resources during 
 [ClearCode](https://www.youtube.com/watch?v=QU1pPzEGrqw) <br>
 [JCode](https://www.youtube.com/watch?v=paItMJuKwwM) <br>
 
-__Assets__
+__Assets__ <br>
 [JCode](https://github.com/JCode1029/top-down-shooter/tree/main/bullet) <br>
 [Pixel-Boy](https://x.com/2Pblog1) and [AAA](https://www.instagram.com/challenger.aaa/?hl=fr): 
 [Art Pack](https://pixel-boy.itch.io/ninja-adventure-asset-pack) <br>
