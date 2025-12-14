@@ -11,7 +11,7 @@ This is a tiny top down shooter video game starring our two characters: flower g
   - [Web](https://apunthegreat.itch.io/flower-girl)
   - [Phone](https://apunthegreat.itch.io/flower-girl-mobile)
 - Download Desktop version
-  - releases link
+  - [download](https://github.com/shayaandanishansari/flowergirl/releases)
 
 ## INSTRUCTIONS
 
@@ -27,7 +27,7 @@ This is a tiny top down shooter video game starring our two characters: flower g
 - Clone the repo
   - git clone https://github.com/shayaandanishansari/file_structure_visualiser/ 
 - Run
-  - flutter run
+  - python Web/main.py
 
 ## __Credits__ <br>
 
