@@ -2,8 +2,8 @@
 This is a tiny top down shooter video game starring our two characters: flower girl, and tank respectively in Level 1 and Level 2. <br>
 
 <div style="display: flex; justify-content: center; gap: 16px;">
-  <img src="assets/level_1_demo_image.png" width="45%">
-  <img src="assets/level_2_demo_image.png" width="45%">
+  <img src="Web/assets/level_1_demo_image.png" width="45%">
+  <img src="Web/assets/level_2_demo_image.png" width="45%">
 </div>
 
 ## PLAY
@@ -15,7 +15,7 @@ This is a tiny top down shooter video game starring our two characters: flower g
 
 ## INSTRUCTIONS
 
-![img.png](assets/instructions.png)
+![img.png](Web/assets/instructions.png)
 
 
 
