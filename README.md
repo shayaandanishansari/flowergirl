@@ -50,4 +50,4 @@ __Technology__
 [pygbag](https://pypi.org/project/pygbag/) <br>
 [itch.io](https://itch.io/) <br>
 
-_and for everyone and everything that positively acted directly or indirectly towards the success of Flower Girl_
+_and for everyone and everything that positively contributed directly or indirectly towards the success of Flower Girl_
