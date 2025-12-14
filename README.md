@@ -27,7 +27,15 @@ This is a tiny top down shooter video game starring our two characters: flower g
 - Clone the repo
   - git clone https://github.com/shayaandanishansari/file_structure_visualiser/ 
 - Run
+  - python -m venv .venv
+  - Windows: .venv\Scripts\activate 
+  - macOS/Linux: source .venv/bin/activate
+  - pip install requirements.txt 
   - python Web/main.py
+- Build
+  - cd Web
+  - pip install -r requirements.txt pygbag
+  - python -m pygbag --build main.py
 
 ## __Credits__ <br>
 
