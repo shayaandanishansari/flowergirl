@@ -53,7 +53,7 @@ __Assets__ <br>
 [Pixel-Boy](https://x.com/2Pblog1) and [AAA](https://www.instagram.com/challenger.aaa/?hl=fr): 
 [Art Pack](https://pixel-boy.itch.io/ninja-adventure-asset-pack) <br>
 
-__Technology__
+__Technology__ <br>
 [Pygame](https://www.pygame.org/news) <br>
 [pygbag](https://pypi.org/project/pygbag/) <br>
 [itch.io](https://itch.io/) <br>
